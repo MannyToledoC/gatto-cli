@@ -10,7 +10,8 @@ const program = new commander.Command();
 program.version("1.0.0").name("gatto").description("React CLI");
 
 program
-  .command("skeleton")
+  .command("@skeleton")
+  .alias("make:skeleton")
   .argument("<name>")
   .description("Creates React skeleton project")
   .action((name) => {
@@ -18,14 +19,16 @@ program
   });
 program
   .command("@component")
-  .argument("[name]")
+  .alias("make:component")
+  .argument("<name>")
   .description("Creates React component")
   .action((name) => {
     component.createComponent(name);
   });
 program
   .command("@container")
-  .argument("[name]")
+  .alias("make:container")
+  .argument("<name>")
   .description("Creates React container")
   .action((name) => {
     container.createContainer(name);

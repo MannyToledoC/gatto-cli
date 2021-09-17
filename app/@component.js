@@ -7,11 +7,10 @@ const files = [
   { item: ".jsx", content: "" },
   { item: "index.jsx", content: "" },
 ];
-// const url = "./src/components/";
+
 const url = path.join("src", "components");
 
 function createComponent(name) {
-  // const locationUrl = `${url}${name}/`;
   const locationUrl = path.join(url, name);
 
   util.createDir(locationUrl);
